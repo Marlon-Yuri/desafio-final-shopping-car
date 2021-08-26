@@ -167,7 +167,12 @@ export default class App extends Component {
       })
 
     })
+
+    
   }
+
+
+  
 
   
 
@@ -224,7 +229,7 @@ export default class App extends Component {
           <h2>
             Total:
           </h2>
-          <h2>R$</h2>
+          <h2><u>{this.state.Carrinho.reduce((acc, valor) => acc + valor.preço, 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', currencyDisplay: 'symbol' })}</u></h2>
         </TotalPrize>
           </div>
 
